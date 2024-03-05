@@ -6,7 +6,7 @@ def rename_dir_files(dir_path: str, seperation_place: str): # dir_path = directo
 
   for i in range(len(removed_songs_text)):
     if list_of_songs[i] != removed_songs_text[i]:
-      os.rename("music/" + list_of_songs[i], "music/" + removed_songs_text[i])
+      os.rename(dir_path + "/" + list_of_songs[i], dir_path + "/" + removed_songs_text[i])
       
 # Example use: -> Directory with sound snippets with an unnecessary info e.g Sound effect - Email.mp3, Sound effect - Swoosh.mp3
 rename_dir_files("music", "- ") # -> Removes *Sound effect - * --> new file is now Email.mp3
